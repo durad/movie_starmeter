@@ -35,10 +35,6 @@
 
 // main();
 
-var onLivereload = function(path, options) {
-	console.log(path, options);
-}
-
 // $(document).ready(function() {
 // 	console.log(111);
 // 	// document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>');
@@ -54,22 +50,3 @@ var onLivereload = function(path, options) {
 // 	$('body').append('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>');
 // 	console.log(222);
 // }, 5000);
-
-
-chrome.webRequest.onBeforeRequest.addListener(hook, {urls: ['file://localhost/reload*']});
-
-function hook(details) {
-	console.log('reloading all dev extensions');
-	chrome.management.getAll(function(extensions){
-		for(var i in extensions){
-			extension = extensions[i];
-			if (extension.installType == 'development' && extension.enabled && extension.name != 'Reload Extension') {
-				chrome.management.setEnabled(extension.id, false, function(){
-					chrome.management.setEnabled(extension.id, true);
-				});
-			}
-		}
-	});
-
-	chrome.tabs.remove(details.tabId);
-}
