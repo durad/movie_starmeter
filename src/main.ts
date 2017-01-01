@@ -50,3 +50,5 @@
 // 	$('body').append('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>');
 // 	console.log(222);
 // }, 5000);
+
+console.log('test...');

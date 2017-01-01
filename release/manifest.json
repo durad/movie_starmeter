@@ -1,6 +1,4 @@
 {
-  "manifest_version": 2,
-
   "name": "Movie StarMeter",
   "description": "Shows ratings from IMDB, Metacritic and RottenTomatoes on Cineplex.com",
   "version": "0.1",
@@ -9,7 +7,7 @@
     {
       "matches": ["http://www.cineplex.com/Showtimes/*"],
       "css": ["mystyles.css"],
-      "js": ["underscore.js", "async.js", "jquery.js", "myscript.js"]
+      "js": ["underscore.js", "async.js", "jquery.js", "extension.js"]
     }
   ],
 
