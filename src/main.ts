@@ -5,9 +5,17 @@ function processOneTitle(title, titleIndex) {
 	var movieName = $(title).find('.showtime-card--title meta[itemprop="name"]').attr('content');
 	movieName = movieName.replace(/ - An IMAX 3D Experience®$/i, '');
 
-	var omdbParams = { t: movieName, y: (new Date()).getFullYear(), r: 'json', tomatoes: true };
+	var omdbParams = {
+		t: movieName,
+		// y: (new Date()).getFullYear(),
+		r: 'json',
+		tomatoes: true
+	};
+
 	var omdbParamsStr = $.param(omdbParams);
-	var omdbUrl = 'http://www.omdbapi.com/?' + omdbParamsStr;
+	var omdbUrl = 'https://www.omdbapi.com/?' + omdbParamsStr;
+console.log(328);
+console.log(omdbUrl);
 // if (titleIndex > 2) return;
 
 	var jqxhr = $.ajax(omdbUrl, {
@@ -15,6 +23,7 @@ function processOneTitle(title, titleIndex) {
 			dataType: 'json'
 		})
 		.done(function(response) {
+console.log(response);
 			// TODO: handle no response
 			if (response.Response.toLowerCase() !== 'true') return;
 
