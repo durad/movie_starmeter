@@ -1,39 +1,38 @@
 
-// function processOneTitle(title, titleIndex) {
-// 	$(title).find('.movie-showtimes-details').append('<div class="ratings"><p class="imdb">IMDB score: <span class="score"></span></p><p class="metacritic">Metascore: <span class="score"></score></p><p class="tomatometer">Tomatometer: <span class="score"></score></p></div>');
+function processOneTitle(title, titleIndex) {
+	$(title).find('.movie-showtimes-details').append('<div class="ratings"><p class="imdb">IMDB score: <span class="score"></span></p><p class="metacritic">Metascore: <span class="score"></score></p><p class="tomatometer">Tomatometer: <span class="score"></score></p></div>');
 
-// 	var movieName = $(title).find('.showtime-card--title meta[itemprop="name"]').attr('content');
-// 	movieName = movieName.replace(/ - An IMAX 3D Experience®$/i, '');
+	var movieName = $(title).find('.showtime-card--title meta[itemprop="name"]').attr('content');
+	movieName = movieName.replace(/ - An IMAX 3D Experience®$/i, '');
 
-// 	var omdbParams = { t: movieName, y: (new Date()).getFullYear(), r: 'json', tomatoes: true };
-// 	var omdbParamsStr = $.param(omdbParams);
-// 	var omdbUrl = 'http://www.omdbapi.com/?' + omdbParamsStr;
-// // if (titleIndex > 2) return;
+	var omdbParams = { t: movieName, y: (new Date()).getFullYear(), r: 'json', tomatoes: true };
+	var omdbParamsStr = $.param(omdbParams);
+	var omdbUrl = 'http://www.omdbapi.com/?' + omdbParamsStr;
+// if (titleIndex > 2) return;
 
-// 	var jqxhr = $.ajax(omdbUrl, {
-// 			cache: false,
-// 			dataType: 'json'
-// 		})
-// 		.done(function(response) {
-// 			// TODO: handle no response
-// 			if (response.Response.toLowerCase() !== 'true') return;
-// // console.log(response);
+	var jqxhr = $.ajax(omdbUrl, {
+			cache: false,
+			dataType: 'json'
+		})
+		.done(function(response) {
+			// TODO: handle no response
+			if (response.Response.toLowerCase() !== 'true') return;
 
-// 			$(title).find('.movie-showtimes-details .ratings .imdb .score').text(response.imdbRating);
-// 			$(title).find('.movie-showtimes-details .ratings .metacritic .score').text(response.Metascore);
-// 			$(title).find('.movie-showtimes-details .ratings .tomatometer .score').text(response.tomatoMeter);
-// 		})
-// 		.fail(function() {
-// 			// TODO: handle fail
-// 		});
+			$(title).find('.movie-showtimes-details .ratings .imdb .score').text(response.imdbRating);
+			$(title).find('.movie-showtimes-details .ratings .metacritic .score').text(response.Metascore);
+			$(title).find('.movie-showtimes-details .ratings .tomatometer .score').text(response.tomatoMeter);
+		})
+		.fail(function() {
+			// TODO: handle fail
+		});
 
-// }
+}
 
-// function main() {
-// 	// _.each($('.movie-showtime-header'), processOneTitle);
-// }
+function main() {
+	_.each($('.movie-showtime-header'), processOneTitle);
+}
 
-// main();
+main();
 
 // $(document).ready(function() {
 // 	console.log(111);
@@ -51,4 +50,6 @@
 // 	console.log(222);
 // }, 5000);
 
-console.log('test...');
+// $(document).ready(function() {
+//     console.log(444);
+// });

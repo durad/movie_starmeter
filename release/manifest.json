@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["http://www.cineplex.com/Showtimes/*"],
-      "css": ["mystyles.css"],
+      "css": ["style.css"],
       "js": ["underscore.js", "async.js", "jquery.js", "extension.js"]
     }
   ],
