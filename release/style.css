@@ -1,3 +1,9 @@
-.a {
-  width: 116px;
+.movie-showtimes-details .ratings {
+  margin-bottom: 10px;
+}
+.movie-showtimes-details .ratings .rating {
+  margin-bottom: 0px;
+}
+.movie-showtimes-details .ratings .rating .score {
+  font-weight: bold;
 }
