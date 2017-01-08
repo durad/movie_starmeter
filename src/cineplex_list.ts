@@ -2,13 +2,18 @@
 function processOneTitle(title: string) {
 	let ratings = [
 		'<div class="ratings">',
-			'<p class="rating imdb">IMDB score: ',
-				'<span class="score"></span>',
-			'</p>',
-			'<p class="rating tomatometer">Tomatometer: ',
-				'<span class="score"></score>',
-			'</p>',
-		'</div>'].join('');
+			'<div class="rating imdb">',
+				'<div class="icon">&nbsp;</div>',
+				'<div class="title">IMDB score:&nbsp;</div>',
+				'<div class="score"></div>',
+			'</div>',
+			'<div class="rating tomatometer">',
+				'<div class="icon">&nbsp;</div>',
+				'<div class="title">Tomatometer:&nbsp;</div>',
+				'<div class="score"></div>',
+			'</div>',
+		'</div>'
+	].join('');
 
 	$(title).find('.movie-showtimes-details').append(ratings);
 	let movieName = $(title).find('.showtime-card--title meta[itemprop="name"]').attr('content');
