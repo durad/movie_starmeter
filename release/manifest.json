@@ -13,6 +13,16 @@
         "libs/jquery.js",
         "cineplex_list.js"
       ]
+    },
+    {
+      "matches": ["http://www.cineplex.com/Movie/*"],
+      "css": ["cineplex_movie.css"],
+      "js": [
+        "libs/underscore.js",
+        "libs/async.js",
+        "libs/jquery.js",
+        "cineplex_movie.js"
+      ]
     }
   ],
 
