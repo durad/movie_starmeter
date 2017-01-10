@@ -4,7 +4,7 @@
         "outFile": "./../../release/cineplex_movie.js"
     },
     "files": [
-        "./../cineplex_movie.ts",
+        "./cineplex_movie.ts",
         "./../common.ts",
         "./../index.d.ts"
     ]

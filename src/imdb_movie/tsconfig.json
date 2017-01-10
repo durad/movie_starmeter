@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "outFile": "./../../release/cineplex_list.js"
+        "outFile": "./../../release/cineplex_movie.js"
     },
     "files": [
-        "./cineplex_list.ts",
+        "./imdb_movie.ts",
         "./../common.ts",
         "./../index.d.ts"
     ]

@@ -1,5 +1,4 @@
 
-
 function processOneTitle() {
 	let ratings = [
 		'<div class="ratings">',
@@ -19,8 +18,6 @@ function processOneTitle() {
 	let movieHeader = $('.movie-header');
 	let movieName = movieHeader.find('.movie-title').text();
 	movieHeader.find('.movie-title').after(ratings);
-
-console.log(movieName);
 
 	getMovieLinks(movieName, (err, r) => {
 		movieHeader.find('.ratings .imdb .score').html(r.imdbHTML);
