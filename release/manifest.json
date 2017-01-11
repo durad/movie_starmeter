@@ -23,6 +23,16 @@
         "libs/jquery.js",
         "cineplex_movie.js"
       ]
+    },
+    {
+      "matches": ["http://www.imdb.com/title/*"],
+      "css": ["imdb_movie.css"],
+      "js": [
+        "libs/underscore.js",
+        "libs/async.js",
+        "libs/jquery.js",
+        "imdb_movie.js"
+      ]
     }
   ],
 

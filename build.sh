@@ -6,4 +6,4 @@ concurrently --prefix "name" \
     "tsc -w --pretty -p src/cineplex_list/tsconfig.json" \
     "tsc -w --pretty -p src/cineplex_movie/tsconfig.json" \
     "tsc -w --pretty -p src/imdb_movie/tsconfig.json" \
-    "livereload"
+    "cd release && livereload"

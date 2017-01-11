@@ -2,7 +2,7 @@
     "extends": "./../tsconfig.json",
     "compilerOptions": {
         "target": "es5",
-        "outFile": "./../../release/cineplex_movie.js"
+        "outFile": "./../../release/imdb_movie.js"
     },
     "files": [
         "./imdb_movie.ts",
